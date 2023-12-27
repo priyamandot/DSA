@@ -1,0 +1,286 @@
+3
+9
+5 11 8 6 4 10 17 15 18
+10 11 5 6 8 4 15 17 18
+6
+4 2 5 1 6 3
+1 2 4 5 3 6
+8
+7 1 5 8 4 9 2 3
+1 7 8 5 3 2 4 9
+
+//ptrnode find_ptr(ptrnode tree, int attach_to)
+// {
+//     flg = 0;
+//     if (tree == NULL)
+//         return tree;
+//     if (tree->val == attach_to)
+//     {
+//         flg = 1;
+//         return tree;
+//     }
+//     ptrnode check = find_ptr(tree->child_left, attach_to);
+//     if (flg != 1)
+//     {
+//         check = find_ptr(tree->child_right, attach_to);
+//     }
+//     if (flg == 1)
+//     {
+//         return check;
+//     }
+//     return tree;
+// }
+
+
+ptrnode find_ptr(ptrnode tree, int attach_to)
+{
+    if (tree == NULL)
+        return NULL;
+    if (tree->val == attach_to)
+    {
+        return tree;
+    }
+    ptrnode check = find_ptr(tree->child_left, attach_to) ;
+    if (check)
+    {
+        return check;
+    }
+    return find_ptr(tree->child_right, attach_to);
+    
+}
+
+
+
+
+
+
+
+
+
+
+5
+7
+20 10 25 5 15 23 30
+9
+20 10 25 5 15 14 16 23 30
+11
+20 10 25 5 15 14 16 23 30 31 32
+13
+20 10 25 5 15 14 16 23 30 31 32 33 34
+1
+20
+
+25
+oper8
+1
+oper2
+oper4
+oper1
+5
+oper1
+10
+oper1
+10
+oper1
+6
+oper3
+3
+oper3
+4
+oper3
+11
+oper5
+oper6
+oper7
+3
+oper7 
+7
+oper7
+1
+oper8
+2
+oper2
+oper4
+oper5
+oper8
+2
+oper5
+oper1
+7
+oper2
+oper5
+oper6
+
+
+10
+oper6
+oper1
+8
+oper1
+8
+oper2
+oper3
+11
+oper5
+oper1
+10
+oper7
+3
+oper8
+3
+oper5
+
+15
+oper1
+4
+oper3
+5
+oper1
+2
+oper1
+6
+oper2
+oper4
+oper1
+1
+oper5
+oper3
+7
+oper6
+oper3
+3
+oper7
+4
+oper8
+3
+oper5
+oper7
+3
+
+
+
+
+
+15
+OPER1
+4
+OPER3
+5
+OPER1
+2
+OPER1
+6
+OPER2
+OPER4
+OPER1
+1
+OPER5
+OPER3
+7
+OPER6
+OPER3
+5
+OPER7
+4
+OPER8
+3
+OPER5   
+OPER7
+3 
+
+
+
+
+10
+oper6
+oper1
+8
+oper1
+8
+oper2
+oper3
+11
+oper5
+oper1
+10
+oper7
+3
+oper8
+3
+oper5
+
+
+
+
+
+
+
+
+
+
+14
+oper1
+3
+oper1
+4
+oper1
+5
+oper2
+oper4
+oper1
+6
+oper1
+8
+oper3
+7
+oper5
+oper6
+oper8
+2
+oper5
+oper8
+2
+oper5
+
+15
+oper1
+4
+oper3
+5
+oper1
+2
+oper1
+6
+oper2
+oper4
+oper1
+1
+oper5
+oper3
+7
+oper6
+oper3
+3
+oper7
+4
+oper8
+3
+oper5
+oper7
+3
+
+14
+(aaa(
+[{9}]
+({)}
+abddba
+{{{}}}
+[abc]
+nitin
+(
+laila
+ccc
+ddd
+()()
+}}
+{}]
